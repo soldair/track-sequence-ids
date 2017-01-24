@@ -1,0 +1,28 @@
+{
+  "name": "track-sequence-ids",
+  "version": "1.0.0",
+  "description": "if you are doing work related to sequence ids this tracks what you should store in your .sequence file.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "standard && nyc tape test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soldair/track-sequence-ids.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soldair/track-sequence-ids/issues"
+  },
+  "homepage": "https://github.com/soldair/track-sequence-ids#readme",
+  "devDependencies": {
+    "nyc": "^10.1.2",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3"
+  }
+}

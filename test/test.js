@@ -1,11 +1,9 @@
 var track = require('../')
 var test = require('tape')
 
-
-test("can",function(t){
-
+test('can', function (t) {
   var saves = []
-  var start = track(function(sequence){
+  var start = track(function (sequence) {
     // onsave function
     saves.push(sequence)
   })
@@ -18,7 +16,6 @@ test("can",function(t){
   done1()
   done2()
 
-
-  t.deepEquals([1,3],saves,'saves should be 1 then 3')
+  t.deepEquals([1, 3], saves, 'saves should be 1 then 3')
   t.end()
 })
