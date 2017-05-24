@@ -1,4 +1,4 @@
-
+var once = require('once')
 module.exports = function (save) {
   var activeSeq = {}
   // started sequences are tracked here.
@@ -13,7 +13,7 @@ module.exports = function (save) {
   function start (sequence) {
     activeSeq[sequence] = sequence
 
-    return function done () {
+    return once(function done () {
       delete activeSeq[sequence]
 
       if (sequence > maxDone) maxDone = sequence
@@ -38,7 +38,7 @@ module.exports = function (save) {
         start.seq = sequence
         save(sequence)
       }
-    }
+    })
   }
 }
 
